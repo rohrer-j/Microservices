@@ -1,0 +1,6 @@
+[submodule "protofiles"]
+	path = protofiles
+	url = https://github.com/rohrer-j/Protofiles.git
+[submodule "HikrobotCam"]
+	path = HikrobotCam
+	url = https://github.com/rohrer-j/HikrobotCam.git
