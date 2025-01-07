@@ -4,3 +4,6 @@
 [submodule "HikrobotCam"]
 	path = HikrobotCam
 	url = https://github.com/rohrer-j/HikrobotCam.git
+[submodule "DummyImageDetection"]
+	path = DummyImageDetection
+	url = https://github.com/rohrer-j/DummyImageDetection.git
