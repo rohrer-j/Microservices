@@ -7,3 +7,6 @@
 [submodule "DummyImageDetection"]
 	path = DummyImageDetection
 	url = https://github.com/rohrer-j/DummyImageDetection.git
+[submodule "Coordinator"]
+	path = Coordinator
+	url = https://github.com/rohrer-j/Coordinator.git
