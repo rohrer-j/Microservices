@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Attach to Coordinator",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/Coordinator/src",
+                    "remoteRoot": "/app/src"
+                }
+            ]
+        },
+        
+        {
+            "name": "Python Debugger: Attach to Hikrobot",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5679
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/HikrobotCam/src",
+                    "remoteRoot": "/app/src"
+                }
+            ]
+        },
+        {
+            "name": "Python Debugger: Attach to ImageDetection",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5680
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/DummyImageDetection/src",
+                    "remoteRoot": "/app/src"
+                }
+            ]
+        },
+
+    ]
+}

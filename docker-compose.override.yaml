@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  coordinator:
+    build:
+      context: ./Coordinator
+      dockerfile: Dockerfile
+      target: debug
+    volumes:
+      - ./Coordinator/src:/app/src
+    ports:
+      - "5678:5678"
+    entrypoint: [ "python3", "-m", "debugpy", "--listen", "0.0.0.0:5678", "-m", "app", "--wait-for-client", "--multiprocess"]
+
+  hikrobotservice:
+    build:
+      context: ./HikrobotCam
+      dockerfile: Dockerfile
+      target: debug
+    volumes:
+      - ./HikrobotCam/src:/app/src
+    ports:
+      - "5679:5678"
+    entrypoint: [ "python3", "-m", "debugpy", "--listen", "0.0.0.0:5678", "-m", "app", "--wait-for-client", "--multiprocess"]
+
+  dummyimagedetection:
+    build:
+      context: ./DummyImageDetection
+      dockerfile: Dockerfile
+      target: debug
+    volumes:
+       - ./DummyImageDetection/src:/app/src
+    ports:
+      - "5680:5678"
+    entrypoint: [ "python3", "-m", "debugpy", "--listen", "0.0.0.0:5678", "-m", "app", "--wait-for-client", "--multiprocess"]
