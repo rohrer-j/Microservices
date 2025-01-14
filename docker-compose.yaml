@@ -5,7 +5,7 @@ services:
       context: ./Coordinator
       dockerfile: Dockerfile
       target: production
-    image: coordinator
+    image: coordinator:production
     networks:
       - microservices
     environment:
@@ -18,7 +18,7 @@ services:
       context: ./HikrobotCam
       dockerfile: Dockerfile
       target: production
-    image: cameraservice
+    image: cameraservice:production
     networks:
       - microservices
     devices:
@@ -29,7 +29,7 @@ services:
       context: ./DummyImageDetection
       dockerfile: Dockerfile
       target: production
-    image: dummyimagedetection
+    image: dummyimagedetection:production
     networks:
       - microservices
 
