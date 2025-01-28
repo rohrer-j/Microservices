@@ -13,6 +13,8 @@ services:
     image: microservicesvt/cameraservice:production
     networks:
       - microservices
+    volumes:
+      - /opt/MVS/lib/aarch64/:/opt/MVS/lib/aarch64/
     devices:
       - /dev/bus/usb:/dev/bus/usb
 

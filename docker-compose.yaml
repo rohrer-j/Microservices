@@ -19,6 +19,8 @@ services:
       dockerfile: Dockerfile
       target: production
     image: cameraservice:production
+    volumes:
+    - /opt/MVS/lib/aarch64/:/opt/MVS/lib/aarch64/
     networks:
       - microservices
     devices:
